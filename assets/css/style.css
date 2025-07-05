@@ -1855,3 +1855,71 @@ body {
 /*-----------------------------------*\
   #ENHANCED ANIMATIONS
 \*-----------------------------------*/
+
+/*-----------------------------------*\
+  #RESPONSIVE MAP STYLES
+\*-----------------------------------*/
+
+.map-container {
+  padding: 40px 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.map-wrapper {
+  position: relative;
+  padding-bottom: 33.33%; /* 3:1 Aspect Ratio (adjust as needed) */
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-6);
+  box-shadow: var(--shadow-3);
+}
+
+.responsive-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(0.3);
+  transition: filter 0.3s ease;
+}
+
+.responsive-map:hover {
+  filter: grayscale(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .map-container {
+    padding: 30px 20px;
+  }
+  
+  .map-wrapper {
+    padding-bottom: 35%; /* Slightly taller on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    padding: 20px 15px;
+  }
+  
+  .map-wrapper {
+    padding-bottom: 40%; /* Even taller on mobile */
+    border-radius: var(--radius-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .map-container {
+    padding: 15px 10px;
+  }
+  
+  .map-wrapper {
+    padding-bottom: 45%; /* Maximum height ratio for very small screens */
+    border-radius: var(--radius-3);
+  }
+}
