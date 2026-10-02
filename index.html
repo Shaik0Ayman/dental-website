@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 
 <head>
   <meta charset="UTF-8">
@@ -7,26 +7,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Meta Tags -->
-  <title>Best Dental Solutions Chennai | Expert Dental Care by Dr. Rameezuddin & Dr. Samiunnisa</title>
-  <meta name="description" content="Best Dental Solutions in Chennai offers comprehensive dental care including laser root canal, dental implants, orthodontics, and cosmetic dentistry. Book appointment with expert dentists Dr. Rameezuddin T and Dr. Samiunnisa Begum S.">
-  <meta name="keywords" content="dental clinic Chennai, best dentist Chennai, dental implants, root canal treatment, orthodontics, cosmetic dentistry, Neelankarai dentist, laser dentistry, smile designing, dental care Chennai">
+  <title>Best Dental Solutions | Dental Clinic &amp; Dentist in Neelankarai, Chennai</title>
+  <meta name="description" content="Dental clinic in Neelankarai, Chennai (ECR) for laser root canal, dental implants, Invisalign, braces &amp; smile designing. Book an in-clinic visit or an online consultation with Dr. Rameezuddin T &amp; team.">
+  <meta name="keywords" content="dentist in Neelankarai, dental clinic Neelankarai, dentist ECR Chennai, dental clinic Chennai, laser root canal Chennai, dental implants Chennai, Invisalign Chennai, smile designing, online dental consultation">
   <meta name="author" content="Best Dental Solutions">
   <meta name="robots" content="index, follow">
   <meta name="language" content="en">
-  <meta name="revisit-after" content="7 days">
-  
+    
   <!-- Open Graph Meta Tags for Social Media -->
-  <meta property="og:title" content="Best Dental Solutions Chennai | Expert Dental Care">
+  <meta property="og:title" content="Best Dental Solutions | Dental Clinic in Neelankarai, Chennai">
   <meta property="og:description" content="State-of-the-art dental clinic in Chennai offering comprehensive dental care from routine checkups to advanced cosmetic treatments. Expert dentists, modern technology, patient comfort.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bestdentalsolutions.in/">
   <meta property="og:image" content="https://bestdentalsolutions.in/assets/images/hero-banner.png">
+  <meta property="og:image:width" content="932">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:image:alt" content="Dentist at Best Dental Solutions, Neelankarai, Chennai">
   <meta property="og:site_name" content="Best Dental Solutions">
   <meta property="og:locale" content="en_IN">
   
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Best Dental Solutions Chennai | Expert Dental Care">
+  <meta name="twitter:title" content="Best Dental Solutions | Dental Clinic in Neelankarai, Chennai">
   <meta name="twitter:description" content="Comprehensive dental care in Chennai with expert dentists Dr. Rameezuddin T and Dr. Samiunnisa Begum S. Modern treatments, patient comfort.">
   <meta name="twitter:image" content="https://bestdentalsolutions.in/assets/images/hero-banner.png">
   
@@ -38,6 +40,46 @@
   
   <!-- Canonical URL -->
   <link rel="canonical" href="https://bestdentalsolutions.in/">
+
+  <!--
+    - Google Search Console: if you verify with the "HTML tag" method, paste the
+    - <meta name="google-site-verification" ...> tag Google gives you here.
+  -->
+
+  <!--
+    - Google Analytics 4: paste your Measurement ID (looks like G-XXXXXXXXXX) into
+    - GA_MEASUREMENT_ID to turn analytics on. Leave it empty to keep it off.
+  -->
+  <script>
+    (function () {
+      var GA_MEASUREMENT_ID = '';
+      if (!GA_MEASUREMENT_ID) return;
+
+      var tag = document.createElement('script');
+      tag.async = true;
+      tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+      document.head.appendChild(tag);
+
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', GA_MEASUREMENT_ID);
+
+      // Count the clicks that turn visitors into patients.
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest && e.target.closest('a[href]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        if (href.indexOf('tel:') === 0) {
+          window.gtag('event', 'contact_click', { method: 'phone' });
+        } else if (href.indexOf('wa.me') !== -1) {
+          window.gtag('event', 'contact_click', { method: 'whatsapp' });
+        } else if (href.indexOf('mailto:') === 0) {
+          window.gtag('event', 'contact_click', { method: 'email' });
+        }
+      });
+    })();
+  </script>
   
   <!-- 
     - favicon
@@ -50,6 +92,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preload" as="image" href="./assets/images/hero-banner.webp" type="image/webp" fetchpriority="high">
 
   <!-- 
     - google font link
@@ -70,7 +113,7 @@
     "url": "https://bestdentalsolutions.in/",
     "logo": "https://bestdentalsolutions.in/favicon.svg",
     "image": "https://bestdentalsolutions.in/assets/images/hero-banner.png",
-    "telephone": "+91-09600118079",
+    "telephone": "+91-9600118079",
     "email": "Bestdentalsolutions24x7@gmail.com",
     "address": {
       "@type": "PostalAddress",
@@ -106,10 +149,15 @@
       "Oral and Maxillofacial Surgery",
       "Orthodontics"
     ],
-    "serviceArea": {
-      "@type": "City",
-      "name": "Chennai"
-    },
+    "areaServed": [
+      { "@type": "City", "name": "Chennai" },
+      { "@type": "Place", "name": "Neelankarai" },
+      { "@type": "Place", "name": "Palavakkam" },
+      { "@type": "Place", "name": "Kottivakkam" },
+      { "@type": "Place", "name": "Injambakkam" },
+      { "@type": "Place", "name": "Thiruvanmiyur" },
+      { "@type": "Place", "name": "East Coast Road (ECR)" }
+    ],
     "founder": [
       {
         "@type": "Person",
@@ -201,6 +249,17 @@
           "@type": "Service",
           "name": "Full Mouth Rehabilitation",
           "description": "Comprehensive restoration of teeth, bite, and jaw function"
+        }
+      },
+      {
+        "@type": "Offer",
+        "price": "299",
+        "priceCurrency": "INR",
+        "url": "https://bestdentalsolutions.in/#appointment",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Online Dental Consultation",
+          "description": "30-minute video consultation with a dentist over Google Meet, available Monday, Wednesday, Friday and Sunday from 1 PM to 4 PM"
         }
       }
     ]
@@ -325,7 +384,7 @@
             <h1 class="h1 hero-title">A Story Behind Every Smile</h1>
 
             <p class="hero-text">
-              At Best Dental Solutions, we believe a healthy smile is the foundation of overall wellness. Our state-of-the-art clinic offers comprehensive dental care — from routine checkups and cleanings to advanced cosmetic and restorative treatments. With a team of experienced dentists and a commitment to patient comfort, we ensure personalized, high-quality care for every smile.
+              At Best Dental Solutions, we believe a healthy smile is the foundation of overall wellness. Our state-of-the-art dental clinic in Neelankarai, Chennai offers comprehensive dental care — from routine checkups and cleanings to advanced cosmetic and restorative treatments. With a team of experienced dentists and a commitment to patient comfort, we ensure personalized, high-quality care for every smile.
             </p>
 
             <!-- From Uiverse.io by Allyhere --> 
@@ -339,7 +398,8 @@
           </div>
 
           <figure class="hero-banner">
-            <img src="./assets/images/hero-banner.png" width="587" height="839" alt="hero banner" class="w-100">
+            <img src="./assets/images/hero-banner.webp" width="587" height="839" fetchpriority="high"
+              alt="Dentist at Best Dental Solutions, Neelankarai, standing beside a dental chair" class="w-100">
           </figure>
 
         </div>
@@ -502,7 +562,7 @@
         <div class="container">
 
           <figure class="about-banner">
-            <img src="./assets/images/about-banner.png" width="470" height="538" loading="lazy" alt="about banner"
+            <img src="./assets/images/about-banner.webp" width="470" height="538" loading="lazy" alt="Dentist examining a patient's teeth at Best Dental Solutions clinic in Chennai"
               class="w-100">
           </figure>
 
@@ -546,7 +606,7 @@ Come experience expert dental care that puts your needs first—because at Best 
               <div class="doctor-card">
 
                 <div class="card-banner img-holder" style="--width: 460; --height: 500;">
-                  <img src="./assets/images/dr rameez.jpg" width="460" height="500" loading="lazy" alt="Howard Holmes"
+                  <img src="./assets/images/dr rameez.jpg" width="460" height="500" loading="lazy" alt="Dr. Rameezuddin T, Endodontist and Aesthetic Dentist"
                     class="img-cover">
                 </div>
                 
@@ -570,7 +630,7 @@ Come experience expert dental care that puts your needs first—because at Best 
               <div class="doctor-card">
 
                 <div class="card-banner img-holder" style="--width: 460; --height: 500;">
-                  <img src="./assets/images/dr sam.png" width="460" height="500" loading="lazy" alt="Ella Thompson"
+                  <img src="./assets/images/dr sam.webp" width="460" height="500" loading="lazy" alt="Dr. Samiunnisa Begum S, Oral Medicine and Radiology specialist"
                     class="img-cover">
                 </div>
 
@@ -595,7 +655,7 @@ Come experience expert dental care that puts your needs first—because at Best 
               <div class="doctor-card">
 
                 <div class="card-banner img-holder" style="--width: 460; --height: 500;">
-                  <img src="./assets/images/dr bjoy.jpg" width="460" height="500" loading="lazy" alt="Vincent Cooper"
+                  <img src="./assets/images/dr bjoy.jpg" width="460" height="500" loading="lazy" alt="Dr. Bejoy Zachariah, Prosthodontist and Implantologist"
                     class="img-cover">
                 </div>
                 
@@ -620,7 +680,7 @@ Come experience expert dental care that puts your needs first—because at Best 
               <div class="doctor-card">
 
                 <div class="card-banner img-holder" style="--width: 460; --height: 500;">
-                  <img src="./assets/images/dr vignesh.jpg" width="460" height="500" loading="lazy" alt="Danielle Bryant"
+                  <img src="./assets/images/dr vignesh.jpg" width="460" height="500" loading="lazy" alt="Dr. Vigneshwar Rahaman, Pedodontist"
                     class="img-cover">
                 </div>
 
@@ -644,7 +704,7 @@ Come experience expert dental care that puts your needs first—because at Best 
               <div class="doctor-card">
 
                 <div class="card-banner img-holder" style="--width: 460; --height: 500;">
-                  <img src="./assets/images/dr bala.jpg" width="460" height="500" loading="lazy" alt="Danielle Bryant"
+                  <img src="./assets/images/dr bala.jpg" width="460" height="500" loading="lazy" alt="Dr. Balasubramani S.K, Oral and Maxillofacial Surgeon"
                     class="img-cover">
                 </div>
 
@@ -668,7 +728,7 @@ Come experience expert dental care that puts your needs first—because at Best 
               <div class="doctor-card">
 
                 <div class="card-banner img-holder" style="--width: 460; --height: 500;">
-                  <img src="https://ahchospital.org/images/avatar-female.jpg" width="460" height="500" loading="lazy" alt="Danielle Bryant"
+                  <img src="https://ahchospital.org/images/avatar-female.jpg" width="460" height="500" loading="lazy" alt="Dr. Dilshad Banu, Oral and Maxillofacial Surgeon"
                     class="img-cover">
                 </div>
 
@@ -692,7 +752,7 @@ Come experience expert dental care that puts your needs first—because at Best 
               <div class="doctor-card">
 
                 <div class="card-banner img-holder" style="--width: 460; --height: 500;">
-                  <img src="./assets/images/dr divya.jpg" width="460" height="500" loading="lazy" alt="Danielle Bryant"
+                  <img src="./assets/images/dr divya.webp" width="460" height="500" loading="lazy" alt="Dr. Divya Loganathan, Orthodontist"
                     class="img-cover">
                 </div>
 
@@ -716,7 +776,7 @@ Come experience expert dental care that puts your needs first—because at Best 
               <div class="doctor-card">
 
                 <div class="card-banner img-holder" style="--width: 460; --height: 500;">
-                  <img src="./assets/images/dr josuha.jpg" width="460" height="500" loading="lazy" alt="Danielle Bryant"
+                  <img src="./assets/images/dr josuha.webp" width="460" height="500" loading="lazy" alt="Dr. Joshua Stalin, Orthodontist"
                     class="img-cover">
                 </div>
 
@@ -760,7 +820,7 @@ Come experience expert dental care that puts your needs first—because at Best 
         <div class="container">
 
           <figure class="cta-banner">
-            <img src="./assets/images/cta-banner.png" width="1056" height="1076" loading="lazy" alt="cta banner"
+            <img src="./assets/images/cta-banner.webp" width="1056" height="1076" loading="lazy" alt="Dentists of Best Dental Solutions in front of the clinic sign"
               class="w-100">
           </figure>
 
@@ -783,39 +843,232 @@ Come experience expert dental care that puts your needs first—because at Best 
         </div>
       </section>
 
-      <!-- 
+      <!--
         - #APPOINTMENT FORM
       -->
       <section class="section appointment-form" id="appointment" aria-label="appointment form">
         <div class="container">
           <p class="section-subtitle text-center">Book Your Visit</p>
           <h2 class="h2 section-title text-center">Schedule An Appointment</h2>
-          <div class="form-wrapper">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdN44A9KiDvuerxtR29TlcdUM-nWCisodIkbjb8XmxtTMZYgQ/viewform?embedded=true" 
-                    class="appointment-iframe" 
-                    frameborder="0" 
-                    marginheight="0" 
-                    marginwidth="0">
-              Loading…
-            </iframe>
+
+          <div class="appointment-tabs" role="tablist" aria-label="Choose appointment type">
+            <button type="button" class="appointment-tab-btn active" id="tab-btn-offline"
+                    role="tab" aria-selected="true" aria-controls="tab-panel-offline" data-appointment-tab="offline">
+              <ion-icon name="business-outline" aria-hidden="true"></ion-icon>
+              In-Clinic Appointment
+            </button>
+            <button type="button" class="appointment-tab-btn" id="tab-btn-online"
+                    role="tab" aria-selected="false" aria-controls="tab-panel-online" data-appointment-tab="online">
+              <ion-icon name="videocam-outline" aria-hidden="true"></ion-icon>
+              Online Consultation
+            </button>
           </div>
-          
-          <!-- Fallback button for form issues -->
-          <div class="form-fallback">
-            <p class="form-help-text">Having trouble filling the form?</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdN44A9KiDvuerxtR29TlcdUM-nWCisodIkbjb8XmxtTMZYgQ/viewform" 
-               target="_blank" 
-               class="btn-form-external">
-              Click here to open in new tab
-            </a>
+
+          <div class="appointment-tab-panel active" id="tab-panel-offline" role="tabpanel"
+               aria-labelledby="tab-btn-offline" data-appointment-panel="offline">
+            <div class="form-wrapper">
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdN44A9KiDvuerxtR29TlcdUM-nWCisodIkbjb8XmxtTMZYgQ/viewform?embedded=true"
+                      class="appointment-iframe"
+                      title="In-clinic appointment booking form"
+                      frameborder="0"
+                      marginheight="0"
+                      marginwidth="0">
+                Loading…
+              </iframe>
+            </div>
+
+            <!-- Fallback button for form issues -->
+            <div class="form-fallback">
+              <p class="form-help-text">Having trouble filling the form?</p>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdN44A9KiDvuerxtR29TlcdUM-nWCisodIkbjb8XmxtTMZYgQ/viewform"
+                 target="_blank"
+                 class="btn-form-external">
+                Click here to open in new tab
+              </a>
+            </div>
           </div>
+
+          <div class="appointment-tab-panel" id="tab-panel-online" role="tabpanel"
+               aria-labelledby="tab-btn-online" data-appointment-panel="online" hidden>
+            <div class="form-wrapper online-consultation-wrapper" id="online-consultation-widget" data-oc-root>
+
+              <ol class="oc-steps" data-oc-steps>
+                <li class="oc-step active" data-oc-step="1">Date &amp; Time</li>
+                <li class="oc-step" data-oc-step="2">Your Details</li>
+                <li class="oc-step" data-oc-step="3">Payment</li>
+                <li class="oc-step" data-oc-step="4">Confirmed</li>
+              </ol>
+
+              <div class="oc-panel active" data-oc-panel="1">
+                <p class="oc-hours-note">
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                  Online consultations: Monday, Wednesday, Friday &amp; Sunday, 1:00 PM – 4:00 PM
+                </p>
+                <p class="oc-label" id="oc-date-label">Choose a date</p>
+                <div class="oc-date-grid" role="group" aria-labelledby="oc-date-label" data-oc-date-grid></div>
+                <p class="oc-slots-status" data-oc-slots-status>Select a date to see available times.</p>
+                <div class="oc-slots-grid" data-oc-slots-grid></div>
+              </div>
+
+              <form class="oc-panel" data-oc-panel="2" id="oc-patient-form" novalidate>
+                <p class="oc-selected-slot" data-oc-selected-slot></p>
+                <div class="oc-field">
+                  <label for="oc-name">Full Name</label>
+                  <input type="text" id="oc-name" required>
+                </div>
+                <div class="oc-field">
+                  <label for="oc-phone">Phone Number</label>
+                  <input type="tel" id="oc-phone" required pattern="[0-9]{10}">
+                </div>
+                <div class="oc-field">
+                  <label for="oc-email">Email Address</label>
+                  <input type="email" id="oc-email" required>
+                </div>
+                <div class="oc-field">
+                  <label for="oc-reason">Reason for Consultation</label>
+                  <textarea id="oc-reason" rows="3" required></textarea>
+                </div>
+                <p class="oc-fee-line" data-oc-fee-line></p>
+                <div class="oc-form-actions">
+                  <button type="button" class="btn-form-external" data-oc-back="1">Back</button>
+                  <button type="submit" class="btn-donate">Continue to Payment</button>
+                </div>
+              </form>
+
+              <form class="oc-panel" data-oc-panel="3" id="oc-payment-form" novalidate>
+                <p class="oc-selected-slot" data-oc-selected-slot></p>
+
+                <div class="oc-upi">
+                  <div class="oc-upi-qr" data-oc-upi-qr aria-label="UPI payment QR code" role="img"></div>
+                  <div class="oc-upi-details">
+                    <p class="oc-upi-amount">Pay <strong data-oc-upi-amount></strong></p>
+                    <p class="oc-upi-help">Scan the QR code with any UPI app (Google Pay, PhonePe, Paytm, BHIM…) or pay to this UPI ID:</p>
+                    <div class="oc-upi-id-row">
+                      <code class="oc-upi-id" data-oc-upi-id></code>
+                      <button type="button" class="oc-copy-btn" data-oc-copy-upi>
+                        <ion-icon name="copy-outline" aria-hidden="true"></ion-icon>
+                        <span data-oc-copy-label>Copy</span>
+                      </button>
+                    </div>
+                    <a class="btn-form-external oc-upi-app-link" data-oc-upi-app-link hidden>Pay with a UPI app</a>
+                  </div>
+                </div>
+
+                <div class="oc-field">
+                  <label for="oc-screenshot">Upload payment screenshot</label>
+                  <input type="file" id="oc-screenshot" accept="image/png,image/jpeg,image/webp" required data-oc-screenshot>
+                  <p class="oc-field-hint">A screenshot of the "payment successful" screen showing the amount and transaction ID.</p>
+                  <img class="oc-screenshot-preview" alt="Selected payment screenshot" data-oc-screenshot-preview hidden>
+                </div>
+                <div class="oc-field">
+                  <label for="oc-upi-ref">UPI transaction ID / UTR (12 digits)</label>
+                  <input type="text" id="oc-upi-ref" maxlength="20" inputmode="numeric" autocomplete="off"
+                         required placeholder="e.g. 412345678901">
+                  <p class="oc-field-hint">
+                    Shown on your payment receipt as "UPI transaction ID" (Google Pay), "UTR" (PhonePe)
+                    or "UPI Ref No." (Paytm).
+                  </p>
+                </div>
+
+                <div class="oc-form-actions">
+                  <button type="button" class="btn-form-external" data-oc-back="2">Back</button>
+                  <button type="submit" class="btn-donate" data-oc-submit-payment>Confirm Booking</button>
+                </div>
+              </form>
+
+              <div class="oc-panel" data-oc-panel="4">
+                <div class="oc-confirmation" data-oc-confirmation>
+                  <ion-icon name="checkmark-circle-outline" class="oc-confirm-icon" aria-hidden="true"></ion-icon>
+                  <h3>Your consultation is confirmed!</h3>
+                  <p data-oc-confirm-datetime></p>
+                  <p class="oc-confirm-id" data-oc-confirm-id></p>
+                  <a href="#" target="_blank" rel="noopener" class="btn-form-external" data-oc-meet-link hidden>Join Google Meet</a>
+                  <p class="oc-confirm-note">
+                    We've emailed you the Google Meet link and sent a calendar invite. Our team will also
+                    check your payment; if there's any problem, we'll call you.
+                  </p>
+                </div>
+              </div>
+
+              <p class="oc-error" data-oc-error hidden></p>
+            </div>
+          </div>
+
         </div>
       </section>
 
   
 
 
-      <!-- 
+      <!--
+        - #FAQ
+      -->
+
+      <section class="section faq" id="faq" aria-labelledby="faq-title">
+        <div class="container">
+
+          <p class="section-subtitle text-center">FAQ</p>
+
+          <h2 class="h2 section-title text-center" id="faq-title">Frequently Asked Questions</h2>
+
+          <div class="faq-list">
+
+            <details class="faq-item">
+              <summary>Where is Best Dental Solutions located?</summary>
+              <p>
+                Our dental clinic is at 28, Teachers Colony Main Rd, Workers Estate, Neelankarai, Chennai,
+                Tamil Nadu 600115. We see patients from Neelankarai, Palavakkam, Kottivakkam, Injambakkam,
+                Thiruvanmiyur and across Chennai.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>What are your clinic timings?</summary>
+              <p>
+                The clinic is open Monday to Saturday from 10:00 AM to 8:30 PM, and on Sunday from
+                9:00 AM to 12:30 PM.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do you offer online dental consultations?</summary>
+              <p>
+                Yes. You can book a 30-minute video consultation with our dentists over Google Meet on
+                Monday, Wednesday, Friday and Sunday between 1:00 PM and 4:00 PM. The consultation fee is
+                ₹299, paid by UPI. Choose "Online Consultation" in the <a href="#appointment">booking section</a>
+                above, pick a slot, pay, and upload your payment screenshot. You'll get the Google Meet link by
+                email straight away.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Which dental treatments do you provide?</summary>
+              <p>
+                We provide laser root canal treatment, dental implants, Invisalign clear aligners and
+                orthodontics, smile designing, full mouth rehabilitation, oral cancer screening, children's
+                dentistry and oral surgery, along with routine check-ups and cleanings.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>How do I book an appointment?</summary>
+              <p>
+                Use the <a href="#appointment">appointment form</a> on this page, call us on
+                <a href="tel:+919600118079">+91 96001 18079</a>, or message us on
+                <a href="https://wa.me/message/2PJOSEJSIPHQM1" target="_blank" rel="noopener">WhatsApp</a>.
+              </p>
+            </details>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!--
         - #BLOG
       -->
 
@@ -831,7 +1084,8 @@ Come experience expert dental care that puts your needs first—because at Best 
           <div class="map-container">
             <div class="map-wrapper">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.4934805050734!2d80.25204517515265!3d12.940243515564822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d4c236c91ad%3A0xfabe8a4058747db7!2sBEST%20DENTAL%20SOLUTIONS%20%7Cby%20Dr.%20Rameezuddin.T%20and%20Dr.Samiunnisa%20begum.S!5e0!3m2!1sen!2sin!4v1727258058591!5m2!1sen!2sin" 
-                      class="responsive-map" 
+                      class="responsive-map"
+                      title="Map: Best Dental Solutions, Teachers Colony Main Rd, Neelankarai, Chennai"
                       allowfullscreen="" 
                       loading="lazy" 
                       referrerpolicy="no-referrer-when-downgrade">
@@ -901,7 +1155,7 @@ Come experience expert dental care that puts your needs first—because at Best 
               <ion-icon name="call-outline"></ion-icon>
             </div>
 
-            <a href="tel:+917052101786" class="footer-link">+91-09600118079</a>
+            <a href="tel:+919600118079" class="footer-link">+91-09600118079</a>
           </li>
 
           <li class="footer-item">
@@ -963,10 +1217,16 @@ Come experience expert dental care that puts your needs first—because at Best 
 
 
 
-  <!-- 
+  <!--
+    - QR code generator (UPI payment QR for online consultations)
+  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+
+  <!--
     - custom js link
   -->
   <script src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/online-consultation.js" defer></script>
 
   <!-- 
     - ionicon link
